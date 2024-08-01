@@ -9,32 +9,72 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<nav id="nav">
-    <a href="overview">Overview</a>
-    <a href="about">About</a>
-    <a href="projects">Projects</a>
-    <a href="contact">Contact</a>
-</nav>
+<body>
 
-<main>
-    <div id="overview"></div>
-    <h1>Hi, my name is Zhuolin</h1>
-    <h2>My vison is to become a backend/hardware engineer that makes the world 1% better.</h2>
-    <button type="button" name="github"><a href="https://github.com/zhu0lin" target="_blank">Replace with Github
-            icon</a></button>
-    <button type="button" name="linkedin"><a href="https://www.linkedin.com/in/zhuolin-li-695a46262/"
-            target="_blank">Replace with Linkedin icon</a></button>
-    <button type="button" name="leetcode"><a href="https://leetcode.com/u/zhu0lin/" target="_blank">Replace with
-            Leetcode icon</a></button>
-    </div>
-    <div id="about">
-        
-    </div>
+    <nav id="nav">
+        <a href="#overview" class="active"></a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-</main>
+    <main>
+        <section id="overview" class="main">
+            <h1>Hi, my name is Zhuolin</h1>
+            <h2>My vison is to become a backend/hardware engineer that makes the world 1% better.</h2>
+            <a href="https://github.com/zhu0lin" target="_blank">Replace with Github
+                icon</a>
+            <a href="https://www.linkedin.com/in/zhuolin-li-695a46262/" target="_blank">Replace with Linkedin icon</a>
+            <a href="https://leetcode.com/u/zhu0lin/" target="_blank">Replace with
+                Leetcode icon</a>
+        </section>
 
-<footer>
+        <section id="about" class="main special">
+            <p>I'm currently pursuing my Bachelor's degree in Computer Engineering at the City College
+                of New York. The potential in the combination of software and hardware has always intrigued me.
+                I am also very interested in AI implementation into hardware. My current fellowship at
+                Headstarter AI is a very exciting experience to learn more about AI! In growing my knowledge
+                in both of these fields, I wish to use technology to solve problems that interest me deeply.
+                I enjoy spending time thinking about difficult problems and learning
+                from my peers. I strongly believe that being surrounded by driven, encouraging peers
+                is one of the most important aspects to success.
+            </p>
+            <img src="images/self.jpg">
+        </section>
 
-</footer>
+        <section id="projects" class="main special">
+            <h2>Projects</h2>
+            <h3>Project 1 name</h3>
+            <img src="images/proj1.jpg">
+            <h3>Project 2 name</h3>
+            <img src="images/proj2.jpg">
+            <h3>Project 3 name</h3>
+            <img src="images/proj3.jpg">
+        </section>
+
+        <section id="contact" class="main special">
+            <h2>Send me a message!</h2>
+            <form>
+                <label for="name">Your name</label>
+                <input id="name" type="text" name="name">
+                <br>
+                <label for="email">Your email</label>
+                <input id="email" type="text" name="email">
+                <br>
+                <label for="message">Your message</label>
+                <br>
+                <textarea id="message" rows="10" cols="20" name="message"></textarea>
+                <br>
+                <input value="Send message" type="submit">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Zhuolin Li 2024</p>
+    </footer>
+
+</body>
 
 </html>
