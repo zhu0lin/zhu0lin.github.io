@@ -1,212 +1,236 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-    <title>Zhuolin Li</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="images/favicon.jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <meta name="description"
+        content="Zhuolin Li portfolio website">
+    <meta name="theme-color" content="#080b0f">
+    <title>Zhuolin Li Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
-<div class="wrapper">
 
-    <body>
-
-        <nav class="nav">
-            <div class="button">
+<body>
+    <header class="site-header">
+        <nav class="nav shell" aria-label="Main navigation">
+            <a class="wordmark" href="#home" aria-label="Zhuolin Li, home">ZL<span>.</span></a>
+            <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+                <a href="#moments">Moments</a>
             </div>
         </nav>
+    </header>
 
-        <div id="intro">
-
-            <div class="info">
-                <div class="heading">
-                    <h1>Hi, my name is<span style="color:skyblue"> Zhuolin</span></h1>
-
-                    <h2>My vison is to become a backend/hardware engineer that makes the world <span
-                            style="color:skyblue">1%</span> better.</h2>
-                </div>
-                <div class="images">
-                    <img id="portrait" alt="Zhuolin Li" src="images/self.jpg">
-                </div>
-
-
-            </div>
-
-            <ul class="social-links">
-                <li><a href="https://github.com/zhu0lin" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/zhuolin-li-695a46262/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://leetcode.com/u/zhu0lin/" target="_blank"><i class="fa-solid fa-terminal"></i></a>
-                </li>
-            </ul>
-        </div>
-
-        <div id="about">
-            <p id="bio">I'm currently pursuing my Bachelor's degree in Computer Engineering at the City College
-                of New York. The potential in the combination of software and hardware has always intrigued me.
-                I am also very interested in AI implementation for hardware. In growing my knowledge
-                in both of these fields, I wish to use technology to solve problems that interest me deeply.
-                I enjoy spending time thinking about difficult problems and learning
-                from my peers. I strongly believe that being surrounded by driven, encouraging peers
-                is one of the most important aspects to success.
-            </p>
-        </div>
-
-
-        <div id="projects">
-            <div class="project-container">
-                <div class="section-heading">
-                    <h2><span style="color:skyblue">Projects</span></h2>
-                </div>
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="/images/spotajohn.png">
-                            <div class="card-body">
-                                <h3>Spot a John</h3>
-                                <p class="card-text">Have you ever found yourself in the city without a bathroom? It happens to all of us at some point or another. Unfortunately, it's not so easy to find a quick and accessible bathroom nearby without a hassle most of the time. Spot a John finds bathrooms near you, offering information like hours of operation, who operates it and other important details.</p>
-                                <p>Features include:<br>
-
-                                    &bullet; Find John locations near you easily ⏩<br>
-                                    &bullet; Post John locations near you, spreading the word for others 🤝
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="https://spot-a-john-1bb1e.web.app" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="/images/rainorshine.png">
-                            <div class="card-body">
-                                <h3>RainorShine</h3>
-                                <p class="card-text">A weather app that allows a user to check new weather forecasts for any desired location. Made using the Weatherbit API</p>
-                                <p>Features include:<br>
-
-                                    &bullet; Weather information contains current temperature, weather description, wind speed, etc. 💨<br>
-                                    &bullet; User friendly interface, responsive design📱
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="https://github.com/zhu0lin/RainorShine" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="/images/blogger.png">
-                            <div class="card-body">
-                                <h3>Blogger</h3>
-                                <p class="card-text">A social media posting style app that allows a user to make new posts, edit their posts, and delete posts.</p>
-                                <p>Features include:<br>
-
-                                    &bullet; Dynamic alerts for new actions to posts 🚨<br>
-                                    &bullet; Seamless transition for new post creation, editing, and deletion ➡️
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="https://github.com/zhu0lin/Blogger" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="/images/cutoutcrypto.png">
-                            <div class="card-body">
-                                <h3>CutoutCrypto</h3>
-                                <p class="card-text">A crypto app that allows a user to check new changes to the the current TOP 100 trending currencies. Made using the CoinMarketCap API</p>
-                                <p>Features include:<br>
-
-                                    &bullet; Currency information contains current price, 24 hour change, market cap, etc. 📊 <br>
-                                    &bullet; New changes are updated every 5-10 seconds🚨 <br>
-                                    &bullet; Seamless transition for new price updates ➡️ </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="https://github.com/zhu0lin/cutoutcrypto" target="_blank" ><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-
+    <main id="main">
+        <section class="hero shell" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <h1 id="hero-title">Hi, I’m Zhuolin<span class="accent">.</span><br>I build things because of <span
+                        class="hero-emphasis">curiosity </span>,
+                         <span
+                        class="hero-emphasis"> passion </span>
+                    </h1>
+                        and sometimes, 
+                        <span
+                        class="hero-emphasis">laziness</span>.
+                <p class="hero-description">I am a computer science student who loves turning ambitious ideas into useful
+                     tools and software anyone can use.</p>
+                <div class="hero-socials" aria-label="Social profiles">
+                    <a href="https://github.com/zhu0lin" target="_blank" rel="noopener noreferrer">GitHub <span
+                            aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/zhuolin-li-695a46262/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                    <a href="https://leetcode.com/u/zhu0lin/" target="_blank" rel="noopener noreferrer">LeetCode <span
+                            aria-hidden="true">↗</span></a>
                 </div>
             </div>
-        </div>
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <img id="portrait" src="images/self.jpg" alt="Portrait of Zhuolin Li">
+                </div>
+                <div class="orbit orbit-one" aria-hidden="true"></div>
+                <div class="orbit orbit-two" aria-hidden="true"></div>
+            </div>
+        </section>
 
+        <section class="about section shell" id="about" aria-labelledby="about-title">
+            <div class="section-label"><span>01</span> A LITTLE ABOUT ME</div>
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p>I’m in my senior year at the City College of New York.</p>
+                    <p>My areas of focus are backend development and machine learning.</p>
+                    <p>Most recently, I've been learning how to incorporate agents in my workflows in a smart manner.
+                        I'm currently learning prompt engineering, utilizing agent skills and rules (like Ponytail, test driven dev), and context management.
+                    </p>
+                    <p>I also code by hand still! I believe a lot of what we tell agents to do still requires
+                        a significant amount of foundational and specialized knowledge, and I'm working on growing this knowledge everyday.
+                    </p>
+                    <p>Although the design of this website was made with an agent, I can promise the text you're currently reading is written by myself...</p>
+                    <p>
+                         Outside of school, I love attending hackathons and tech events in the city. Outside of tech, I 
+                        really enjoy solving puzzles like Wordle, Connections, and chess (don't ask about my elo)!</p>
+                    <div class="focus-tags" aria-label="Areas of focus">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-         <div id="experience">
+        <section class="projects section shell" id="projects" aria-labelledby="projects-title">
+            <div class="section-label"><span>02</span> PROJECTS</div>
             <div class="section-heading">
-                <h2><span style="color:skyblue">Experience</span></h2>
+                <p>A few things I’ve been building lately.</p>
             </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card text-bg-{red} mb-3">
-                        <div class="card-body">
-                            <h6 class="card-title"></h6>
-                            <div id="content">
-                                <ul class="timeline">
-                                    <li class="event" data-date="2024">
-                                        <h3>Software Engineering Fellow at Headstarter AI</h3>
-                                        <p>&bullet; Built multiple fullstack projects using React, deploying via Vercel</p>
-                                    </li>
-                                    <li class="event" data-date="2024">
-                                        <h3>AI Consultant at MNC Developement</h3>
-                                        <p>&bullet; Utilized Git to maintain company project source control </p>
-                                        <p>&bullet; Prompted AI for Python
-                                            programs to expediate workflow</p>
-                                    </li>
-                                </ul>
+
+            <div class="project-grid">
+                <article class="project-card project-respira">
+                    <div class="project-art">
+                        <img src="images/RESPIRA.png" alt="Respira project screenshot" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-kicker"><span></span><span>BYTE HACKS · 1ST PLACE</span></div>
+                        <h3>Respira</h3>
+                        <p>A wildfire smoke tracker that helps people understand where smoke may travel and protect
+                            their health.</p>
+                        <div class="project-footer">
+                            <div class="tech-list"><span>Gaussian Plume Model</span><span>FEMS API</span><span>Next.js</span><span>FastAPI</span><span>Gemini</span></div>
+                            <a class="project-link" href="https://github.com/zhu0lin/Respira" target="_blank"
+                                rel="noopener noreferrer" aria-label="View Respira on GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card project-letterbuddy">
+                    <div class="project-art">
+                        <img src="images/LETTERBUDDY.png" alt="LetterBuddy project screenshot" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-kicker"><span></span><span>CTP Hacks</span></div>
+                        <h3>LetterBuddy</h3>
+                        <p>An AI powered handwriting practice app that gives young adults feedback on spacing and
+                            alignment.</p>
+                        <div class="project-footer">
+                            <div class="tech-list"><span>OpenAI API</span><span>Next.js</span><span>FastAPI</span><span>Supabase</span></div>
+                            <a class="project-link" href="https://github.com/zhu0lin/letterbuddy" target="_blank"
+                                rel="noopener noreferrer" aria-label="View LetterBuddy on GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card project-restroom">
+                    <div class="project-art">
+                        <img src="images/SPOT%20A%20JOHN.png" alt="Spot a John project screenshot" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-kicker"><span></span><span>Personal project</span></div>
+                        <h3>Spot a John</h3>
+                        <p>A crowd sourced restroom finder for dense metropolitan areas, with live location
+                            updates.</p>
+                        <div class="project-footer">
+                            <div class="tech-list"><span>React</span><span>Express</span><span>Firebase</span></div>
+                            <div class="project-links">
+                                <a class="project-link" href="https://spot-a-john-1bb1e.web.app" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Visit Spot a John">Live site</a>
                             </div>
                         </div>
                     </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="experience section shell" id="experience" aria-labelledby="experience-title">
+            <div class="section-label"><span>03</span> EXPERIENCE</div>
+            <div class="experience-grid">
+                <div>
+                    <p class="experience-intro">Opportunities that have helped me grow professionally and technology.</p>
+                </div>
+                <div class="experience-list">
+                    <article class="experience-item">
+                        <span class="experience-date">2026-2027 academic year</span>
+                        <div>
+                            <h3>Treasurer <span>· ACM @ CCNY</span></h3>
+                            <p>Manage finances for the biggest computer science club on campus</p>
+                        </div>
+                    </article>
+                    <article class="experience-item">
+                        <span class="experience-date">SUMMER 2026</span>
+                        <div>
+                            <h3>Software Engineer Intern <span>· AT&amp;T</span></h3>
+                            <p>Built an anomaly detection pipeline for time series network traffic data.</p>
+                        </div>
+                    </article>
+                    <article class="experience-item">
+                        <span class="experience-date">2025 — 2026</span>
+                        <div>
+                            <h3>GenAI Research Intern <span>· City College of New York</span></h3>
+                            <p>Created LLM agent workflows with real estate and engineering partners.</p>
+                        </div>
+                    </article>
+                    <article class="experience-item">
+                        <span class="experience-date">SUMMER 2025</span>
+                        <div>
+                            <h3>Teaching Assistant <span>· CodePath</span></h3>
+                            <p>Led small group sessions solving data structures and algorithm problems.</p>
+                        </div>
+                    </article>
+                    <article class="experience-item">
+                        <span class="experience-date">SUMMER 2025</span>
+                        <div>
+                            <h3>Software Engineer Intern <span>· Cowan Consulting</span></h3>
+                            <p>Built payment features for a community platform.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-        </div>
-    </body>
+        </section>
 
-    <footer id="contact">
-        <h2><span style="color:skyblue">Send me a message!</span></h2>
-        <form id="form">
-            <label for="name">Your name</label>
-            <br>
-            <input id="name" type="text" name="name">
-            <br>
-            <label for="email">Your email</label>
-            <br>
-            <input id="email" type="text" name="email">
-            <br>
-            <label for="message">Your message</label>
-            <br>
-            <textarea id="message" rows="10" cols="50" name="message"></textarea>
-            <br>
-            <input id='submitbutton' value="Send message" type="submit">
-        </form>
-        <p>&copy; Zhuolin Li 2025</p>
+        <section class="moments section shell" id="moments" aria-labelledby="moments-title">
+            <div class="section-label"><span>04</span> MOMENTS</div>
+            <div class="moments-heading">
+                <h2 class="section-title" id="moments-title">Moments with great <span class="muted">people.</span></h2>
+                <p>A few snapshots from campus, community, and beyond.</p>
+            </div>
+            <div class="moments-grid">
+                <figure class="moment-card">
+                    <img src="images/LEAD%20ASPIRE.jpg" alt="Lead Aspire event with fellow participants" loading="lazy">
+                    <figcaption>Lead Aspire</figcaption>
+                </figure>
+                <figure class="moment-card">
+                    <img src="images/ACM%20TABLING.jpg" alt="Meeting students at the CCNY ACM table" loading="lazy">
+                    <figcaption>ACM at CCNY</figcaption>
+                </figure>
+                <figure class="moment-card">
+                    <img src="images/MORE%20LEAD%20ASPIRE.jpg" alt="Lead Aspire group visiting the Microsoft campus" loading="lazy">
+                    <figcaption>Lead Aspire · Microsoft</figcaption>
+                </figure>
+                <figure class="moment-card">
+                    <img src="images/MORE%20ACM%20TABLING.jpg" alt="Students visiting the ACM table at CCNY" loading="lazy">
+                    <figcaption>ACM community</figcaption>
+                </figure>
+                <figure class="moment-card">
+                    <img src="images/CCNY%20RESEARCH.jpg" alt="CCNY research group gathering" loading="lazy">
+                    <figcaption>CCNY research</figcaption>
+                </figure>
+                <figure class="moment-card">
+                    <img src="images/CHESS.jpg" alt="Friends gathered around a chess game" loading="lazy">
+                    <figcaption>Chess with friends</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer shell">
+        <a class="wordmark" href="#home">ZL<span>.</span></a>
+        <p>Updated November 2026 <span aria-hidden="true">·</span> Zhuolin Li</p>
+        <a class="back-to-top" href="#home">Back to top</a>
     </footer>
-</div>
+</body>
 
 </html>
