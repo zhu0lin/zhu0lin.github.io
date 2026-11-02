@@ -20,11 +20,23 @@
     <header class="site-header">
         <nav class="nav shell" aria-label="Main navigation">
             <a class="wordmark" href="#home" aria-label="Zhuolin Li, home">ZL<span>.</span></a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#moments">Moments</a>
+            <div class="nav-actions">
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#moments">Moments</a>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode">
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+                    </svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"></path>
+                    </svg>
+                    <span id="theme-toggle-label">Light mode</span>
+                </button>
             </div>
         </nav>
     </header>
@@ -231,6 +243,18 @@
         <p>Updated November 2026 <span aria-hidden="true">·</span> Zhuolin Li</p>
         <a class="back-to-top" href="#home">Back to top</a>
     </footer>
+    <script>
+        const themeToggle = document.querySelector("#theme-toggle");
+        const themeToggleLabel = document.querySelector("#theme-toggle-label");
+
+        themeToggle.addEventListener("click", () => {
+            const isLight = document.documentElement.dataset.theme !== "light";
+            document.documentElement.dataset.theme = isLight ? "light" : "dark";
+            themeToggleLabel.textContent = isLight ? "Dark mode" : "Light mode";
+            themeToggle.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} mode`);
+            document.querySelector('meta[name="theme-color"]').content = isLight ? "#f7fafc" : "#080b0f";
+        });
+    </script>
 </body>
 
 </html>

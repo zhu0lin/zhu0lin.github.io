@@ -5,12 +5,38 @@
     --surface-raised: #151c24;
     --text: #f3f6f8;
     --muted: #929eaa;
+    --text-secondary: #c1cbd2;
+    --text-body: #a4b0ba;
+    --text-subtle: #87949e;
+    --text-muted: #71808c;
     --line: rgba(215, 229, 239, 0.12);
+    --line-subtle: rgba(215, 229, 239, 0.07);
+    --header-background: rgba(8, 11, 15, 0.82);
+    --card-background: linear-gradient(155deg, rgba(20, 28, 36, 0.97), rgba(13, 17, 22, 0.96));
     --blue: #83d8f5;
     --blue-strong: #55c5ed;
     --font-body: "DM Sans", sans-serif;
     --font-display: "Manrope", sans-serif;
     --font-mono: "DM Mono", monospace;
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --background: #f7fafc;
+    --surface: #ffffff;
+    --surface-raised: #edf3f6;
+    --text: #17232c;
+    --muted: #52616c;
+    --text-secondary: #344651;
+    --text-body: #4b5c67;
+    --text-subtle: #5a6b76;
+    --text-muted: #667782;
+    --line: rgba(24, 50, 65, 0.15);
+    --line-subtle: rgba(24, 50, 65, 0.1);
+    --header-background: rgba(247, 250, 252, 0.88);
+    --card-background: linear-gradient(155deg, #ffffff, #f1f6f8);
+    --blue: #087ea4;
+    --blue-strong: #066b8c;
 }
 
 * {
@@ -57,8 +83,8 @@ a:focus-visible {
     position: sticky;
     z-index: 10;
     top: 0;
-    border-bottom: 1px solid rgba(215, 229, 239, 0.07);
-    background: rgba(8, 11, 15, 0.82);
+    border-bottom: 1px solid var(--line-subtle);
+    background: var(--header-background);
     backdrop-filter: blur(16px);
 }
 
@@ -88,8 +114,14 @@ a:focus-visible {
     gap: clamp(20px, 4vw, 46px);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+}
+
 .nav-links a {
-    color: #c1cbd2;
+    color: var(--text-secondary);
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
@@ -98,6 +130,48 @@ a:focus-visible {
 
 .nav-links a:hover {
     color: var(--blue);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    min-height: 38px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 0 11px;
+    background: var(--surface);
+    color: var(--text);
+    font: 500 11px var(--font-mono);
+    cursor: pointer;
+    transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+}
+
+.theme-icon {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+:root[data-theme="light"] .theme-icon-sun,
+:root:not([data-theme="light"]) .theme-icon-moon {
+    display: none;
 }
 
 .hero {
@@ -142,7 +216,7 @@ a:focus-visible {
 .hero-description {
     max-width: 470px;
     margin: 24px 0 0;
-    color: #aab5bf;
+    color: var(--text-body);
     font-size: 16px;
     line-height: 1.8;
 }
@@ -163,7 +237,7 @@ a:focus-visible {
     border-radius: 5px;
     padding: 0 13px;
     background: rgba(131, 216, 245, 0.07);
-    color: #d6e5eb;
+    color: var(--text-secondary);
     font-family: var(--font-mono);
     font-size: 12px;
     text-decoration: none;
@@ -239,7 +313,7 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: #87949e;
+    color: var(--text-subtle);
     font-size: 16px;
     line-height: 1.4;
 }
@@ -274,7 +348,7 @@ a:focus-visible {
 }
 
 .muted {
-    color: #71808c;
+    color: var(--text-muted);
 }
 
 .about-copy {
@@ -284,7 +358,7 @@ a:focus-visible {
 
 .about-copy p {
     margin: 0 0 15px;
-    color: #a4b0ba;
+    color: var(--text-body);
     font-size: 17px;
     line-height: 1.9;
 }
@@ -306,7 +380,7 @@ a:focus-visible {
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 6px 10px;
-    color: #b7c3cb;
+    color: var(--text-secondary);
     font-family: var(--font-mono);
     font-size: 11px;
 }
@@ -325,7 +399,7 @@ a:focus-visible {
 
 .section-heading > p {
     margin: 0 0 7px;
-    color: #85929d;
+    color: var(--text-subtle);
     font-size: 15px;
 }
 
@@ -341,7 +415,7 @@ a:focus-visible {
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: linear-gradient(155deg, rgba(20, 28, 36, 0.97), rgba(13, 17, 22, 0.96));
+    background: var(--card-background);
     transition: border-color 180ms ease, transform 180ms ease;
 }
 
@@ -376,7 +450,7 @@ a:focus-visible {
     align-items: start;
     justify-content: flex-start;
     gap: 6px;
-    color: #8896a1;
+    color: var(--text-subtle);
     font-size: 9px;
     letter-spacing: 0.06em;
 }
@@ -398,7 +472,7 @@ a:focus-visible {
     flex: 1;
     min-height: 72px;
     margin: 0;
-    color: #9eabb5;
+    color: var(--text-body);
     font-size: 14px;
     line-height: 1.75;
 }
@@ -422,7 +496,7 @@ a:focus-visible {
 .tech-list span {
     border: 0;
     padding: 4px 6px 4px 0;
-    color: #8e9ba5;
+    color: var(--text-muted);
     font-size: 9px;
 }
 
@@ -467,7 +541,7 @@ a:focus-visible {
 .experience-intro {
     max-width: 300px;
     margin-top: 18px;
-    color: #a4b0ba;
+    color: var(--text-body);
     font-size: 16px;
     line-height: 1.9;
 }
@@ -486,7 +560,7 @@ a:focus-visible {
 
 .experience-date {
     padding-top: 5px;
-    color: #82909b;
+    color: var(--text-subtle);
     font-size: 10px;
     letter-spacing: 0.04em;
 }
@@ -499,13 +573,13 @@ a:focus-visible {
 }
 
 .experience-item h3 span {
-    color: #a6b3bd;
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
 .experience-item p {
     margin: 7px 0 0;
-    color: #8e9ba6;
+    color: var(--text-body);
     font-size: 14px;
     line-height: 1.7;
 }
@@ -525,7 +599,7 @@ a:focus-visible {
 
 .moments-heading > p {
     margin: 0 0 7px;
-    color: #85929d;
+    color: var(--text-subtle);
     font-size: 15px;
 }
 
@@ -557,7 +631,7 @@ a:focus-visible {
 
 .moment-card figcaption {
     padding: 11px 13px;
-    color: #c3d0d8;
+    color: var(--text-secondary);
     font-family: var(--font-mono);
     font-size: 11px;
 }
@@ -578,7 +652,7 @@ a:focus-visible {
 .site-footer p,
 .back-to-top {
     margin: 0;
-    color: #7e8b96;
+    color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 9px;
 }
@@ -642,11 +716,31 @@ a:focus-visible {
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 11px;
     }
 
     .nav-links a {
-        font-size: 11px;
+        font-size: 10px;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .theme-toggle {
+        min-height: 34px;
+        gap: 5px;
+        padding-inline: 8px;
+        font-size: 9px;
+    }
+
+    .theme-toggle span {
+        display: none;
+    }
+
+    .theme-icon {
+        width: 13px;
+        height: 13px;
     }
 
     .hero {
